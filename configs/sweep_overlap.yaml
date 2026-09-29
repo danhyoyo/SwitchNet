@@ -1,0 +1,7 @@
+# Cartesian product. Keys use the same section.key syntax as CLI overrides.
+grid:
+  data.class_separation: [0.5, 1.0, 2.0, 4.0]
+  data.imbalance_ratio: [1.0, 10.0]
+  train.seed: [1, 2, 3]
+models: [dense, multi_branch, switchnet_v1, switchnet_v2, switchnet_gate]
+

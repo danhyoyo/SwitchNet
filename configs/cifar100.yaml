@@ -1,0 +1,38 @@
+data:
+  name: cifar100
+  root: ./data
+  num_classes: 100
+  imbalance_ratio: 1.0
+  batch_size: 128
+  num_workers: 4
+  download: false
+model:
+  name: switchnet_v1
+  feature_dim: 128
+  encoder_width: 160
+  expert_bottleneck: 8
+  dropout: 0.1
+  spec_margin: 1.0
+  spec_weight: 0.1
+  gate_parameter_match: true
+  gate_max_hidden: 256
+train:
+  epochs: 120
+  lr: 0.001
+  weight_decay: 0.0005
+  optimizer: adamw
+  scheduler: cosine
+  grad_clip: 5.0
+  device: auto
+  amp: true
+  seed: 42
+  deterministic: true
+  checkpoint_every: 10
+analysis:
+  enabled: true
+  gradient_batches: 5
+  specialization: true
+  flops: true
+logging:
+  output_dir: runs
+  tensorboard: true

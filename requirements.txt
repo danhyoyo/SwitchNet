@@ -1,0 +1,5 @@
+torch>=2.1
+torchvision>=0.16
+numpy>=1.24
+PyYAML>=6.0
+# Optional: tensorboard>=2.14, thop>=0.1.1, pytest>=7.4
